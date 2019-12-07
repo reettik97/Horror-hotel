@@ -544,7 +544,7 @@ input
 
 @media screen and (max-width:768px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .flex-direction {
@@ -569,5 +569,29 @@ input
     }
     #horizontal-menu {
         display: none;
+    }
+    input[type="text"]{
+        background: #ffffff;
+        height: 3.14rem;
+        width: 15rem;
+        border: none;
+        outline: none;
+        padding: 0px 1.5rem;
+        border-radius: 1.5rem 0px 0px 1.5rem;
+        font-size: 1.2rem;
+    }
+    input[type="submit"]{
+        border-radius: 0px 1.5rem 1.5rem 0px;
+        height: 3.14rem;
+        width: 6rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffc107;
+        color: red;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-family: Creepster;
+        
     }
 }
