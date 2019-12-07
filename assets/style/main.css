@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+/* Creepster */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1 {
+    line-height: 1.5;
+}
+
+h4 {
+    line-height: 1.5;
+}
+
+/* start code */
+.flex-direction {
+    flex-direction: row;
+}
+
+.flex-end {
+    justify-content: flex-end;
+    /* text-align: right; */
+}
+
+html {
+    font-size: 16;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.responsive-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotel-img {
+    height: 200px;
+}
+
+.button {
+    background-color: #2E3141;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid gray;
+    padding: 10px 20px;
+}
+
+.button__browse {
+    margin: 20px 0;
+}
+
+/* header */
+.header-flex {
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: rgba(54, 58, 77, .5);
+}
+
+.logo {
+    color: rgb(255, 6, 6);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    align-items: center;
+    padding: 12px 11px;
+    font-family: Creepster;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+.menu {
+    margin-top: 5px;
+    padding: 6px 16px;
+    font-size: 1rem;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+.label-menu {
+	font-size: 13px;
+	position: relative;
+	z-index: 100;
+}
+
+.overlay-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.container-menu {
+	background: rgb(13, 18, 36);
+	padding: 30px 24px;
+	border-radius: 8px;
+	width: 288px;
+	height: min-content;
+	position: relative;
+	text-align: center;
+}
+
+.container-menu h2 {
+	padding-bottom: 12px;
+	border-bottom: solid 2px red;
+	margin-bottom: 12px;
+	font-size: 24px;
+    color: rgb(14, 238, 25);
+    font-family: Creepster;
+}
+
+.nav-menu a {
+	display: block;
+	padding: 4px 0;
+    font-size: 20px;
+    font-family: Creepster;
+}
+
+#horizontal-menu  {
+    height: 64px;
+    line-height: 64px;
+}
+
+#hamburger {
+    height: 48px;
+    line-height: 48px;
+    color: white;
+    font-size: 30px;
+}
+
+#horizontal-menu nav a {
+    padding: 0 10px;
+	font-weight: 200;
+    font-size: 20px;
+    font-family: Creepster;
+}
+
+#toggle-menu {
+	display: none;
+}
+
+#toggle-menu:not(:checked)~.overlay-menu {
+	display: none;
+}
+
+#toggle-menu:checked~.overlay-menu {
+	display: flex;
+}
+
+#hamburger {
+    display: none;
+}
+#horizontal-menu {
+    display: initial;
+}
+
+
+body {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/hunted-house/back1.jpg");
+    background-attachment: fixed;
+}
+
+.diamond-box {
+    width: 4.68rem;
+    height: 4.68rem;
+    /* background-color: #30394A; */
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+}
+.search-heading{
+    padding: 20px 0px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+    color: red;
+    font-family: Creepster;
+    /* text-align: center; */
+} 
+input[type="text"]{
+    background: #ffffff;
+    height: 3.14rem;
+    width: 21.25rem;
+    border: none;
+    outline: none;
+    padding: 0px 1.5rem;
+    border-radius: 1.5rem 0px 0px 1.5rem;
+    font-size: 1.2rem;
+}
+input[type="submit"]{
+    border-radius: 0px 1.5rem 1.5rem 0px;
+    height: 3.14rem;
+    width: 9.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #ffc107;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: Creepster;
+    
+}
+.search-area{
+    text-align: center;
+   
+    /* position: relative;
+    margin: 0 auto; */
+}
+
+
+.hero-padding {
+    padding: 10.93rem 0px;
+}
+
+.hero-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.hero-para {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1.25rem 0px;
+    color: gray;
+}
+
+/* Article section */
+.article-bgc {
+    background-color: #4C5C96;
+}
+
+.img-flex-basis {
+    flex-basis: 30%;
+}
+
+.article-flex-basis {
+    flex-basis: 60%;
+}
+
+/* .img-flex-basis mediaquere */
+.article-image {
+    border-radius: 50%;
+}
+
+.article-padding {
+    padding: 3.25rem 0px;
+}
+
+.article-heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    padding: 20px 0px 10px 0px;
+}
+
+.article-para {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgb(180, 180, 180);
+}
+
+.small-circle {
+    height: 40px;
+    width: 40px;
+    /* font-size: 20px; */
+    /* display: inline-block */
+}
+
+.change-to-inline-block {
+    display: inline-block;
+}
+
+.learn-more {
+    padding: 10px 10px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+ul {
+    padding: 20px 0px;
+}
+
+/* gallery section */
+
+.gallery-container {
+    align-content: stretch;
+}
+.gallery-bgc {
+    background-image: linear-gradient(rgba(0, 0, 0,.8) , rgba(0, 0, 0 ,.8)), url("../images/hunted-house/back2.jpg") ;
+    
+}
+.gallery-padding {
+    padding: 70px 0px;
+}
+
+.gallery-flex-basis {
+    flex-basis: 47%;
+    color: white;
+    margin-top: 40px;
+}
+
+.gallery-heading {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: white;
+    margin-top: 8px;
+}
+
+.gallery-para {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: gray;
+}
+.gallery-price{
+    padding: 15px 0px 0px 10px;
+    /* background-color: rgb(65, 65, 65); */
+    color: white;
+    font-size: 1rem;
+}
+
+.gallery-common-padding {
+    padding: 10px 30px;
+    background-color: #353849;
+}
+
+
+/* contact section */
+.input {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 6px;
+    background: none;
+    border: 1px solid gray;
+    margin: 20px 0px;
+    
+}
+.input:focus , .textarea:focus{
+    color: yellow;
+    border-color: yellow;
+}
+input
+.padding-to-contact-element {
+    padding: 0px 0px .95rem 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.fab,
+.far,
+.fas {
+    /* font-size: 2rem; */
+    color: white;
+}
+
+.far {
+    font-size: 2rem;
+}
+
+.contact-detail-font {
+    font-size: .95rem;
+    padding: 0px 10px;
+    color: rgb(160, 160, 160);
+    line-height: 1.5;
+}
+
+/* footer */
+.footer {
+    padding: 10px 0px 70px 0px;
+    color: gray;
+}
+/* offer */
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 12px;
+    }
+
+    .flex-direction {
+        flex-direction: column;
+    }
+
+    .flex-between {
+        justify-content: space-evenly;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .gallery-flex-basis {
+        flex-basis: 100%;
+    }
+    
+    #hamburger {
+        display: initial;
+    }
+    #horizontal-menu {
+        display: none;
+    }
+}
